@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Story Quest Pack 디코더</title>
+    <title>Story Unpacker for the Poet</title>
     <style>
         * {
             margin: 0;
@@ -203,19 +203,19 @@
 </head>
 <body>
     <div class="container">
-        <h1>📜 Story Quest Pack 디코더</h1>
-        <p class="subtitle">story_quest.pack 파일을 업로드하여 스크립트를 추출하세요</p>
+        <h1>📜 Story Unpacker for the Poet</h1>
+        <p class="subtitle">그 시인의 메시지를 업로드하세요</p>
         
         <div class="upload-area" id="uploadArea">
             <div class="upload-icon">📁</div>
-            <div class="upload-text">파일을 드래그하거나 클릭하여 선택하세요</div>
+            <div class="upload-text">파일을 드래그하거나 클릭하여 선택</div>
             <div class="upload-hint">.pack 파일 지원</div>
             <input type="file" id="fileInput" accept=".pack">
         </div>
         
         <div class="status" id="status"></div>
         
-        <button class="btn" id="downloadBtn">📥 스크립트 다운로드</button>
+        <button class="btn" id="downloadBtn">📥 다운로드</button>
         
         <div class="stats" id="stats"></div>
     </div>
@@ -351,7 +351,7 @@
 
         function generateScript(stories) {
             let output = '=' .repeat(80) + '\n';
-            output += ' Story Quest - Chaos Explore Series\n';
+            output += 'Story Unpacker for the Poet\n';
             output += '='.repeat(80) + '\n\n';
             
             let currentScene = '';
@@ -472,7 +472,7 @@
             document.body.removeChild(a);
             URL.revokeObjectURL(url);
             
-            showStatus('✅ 파일 다운로드가 시작되었습니다!', 'success');
+            showStatus('✅ 파일 다운로드가 시작되었습니다.', 'success');
         });
     </script>
 </body>
